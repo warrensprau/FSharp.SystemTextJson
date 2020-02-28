@@ -5,6 +5,9 @@ open System.Text.Json.Serialization
 open System.Text.Json
 open System.Linq.Expressions
 
+[<Fact>]
+let ``this should fail``() = raise (exn())
+
 module NonStruct =
 
     type Foo() =
