@@ -20,7 +20,7 @@ open System.Text.Json
 open System.Text.Json.Serialization
 
 let options = JsonSerializerOptions()
-options.Converters.Add(JsonFSharpConverter())
+options.Converters.Add(new JsonFSharpConverter())
 
 JsonSerializer.Serialize({| x = "Hello"; y = "world!" |}, options)
 // --> {"x":"Hello","y":"world!"}
